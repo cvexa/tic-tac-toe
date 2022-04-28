@@ -1,0 +1,32 @@
+body{
+    height: 99vh;
+}
+
+.main{
+    height: 99vh;
+}
+
+.x-mark, .o-mark{
+    height: 50px;
+    width: 50px;
+}
+
+#game-holder > div{
+    /*min-height: 130px;*/
+    /*max-height: 130px;*/
+    /*padding-top:2%;*/
+    /*padding-bottom:2%;*/
+    height: 130px;
+    overflow: hidden;
+    display:block;
+}
+
+#info-box-text,#info-box-title{
+    font-weight: bolder;
+}
+
+#victory-gif{
+    position:absolute;
+    margin-left: 33.5%;
+    margin-top: 7.5%;
+}
