@@ -32,12 +32,12 @@ function fieldListeners()
         $('#game-holder > div').click(function () {
             var clickedId = $(this).attr('id');
 
-            checkClickedField(clickedId);
-
-            if (playerTurn < 2) {
-                playerTurn = 2;
-            } else {
-                playerTurn = 1;
+            if(checkClickedField(clickedId)) {
+                if (playerTurn < 2) {
+                    playerTurn = 2;
+                } else {
+                    playerTurn = 1;
+                }
             }
 
             if(!isGameEnded) {
@@ -55,7 +55,7 @@ function checkClickedField(clickedId)
     if(!isGameEnded) {
         if (isImgLoaded) {
             alert('Click another box, this one is already taken !');
-            return;
+            return false;
         }
         var position = parseInt($(''+clickedElement+'').data('position'));
 
@@ -77,7 +77,7 @@ function checkClickedField(clickedId)
 
         checkVictoryConditions();
 
-        return;
+        return true;
     }
 }
 
